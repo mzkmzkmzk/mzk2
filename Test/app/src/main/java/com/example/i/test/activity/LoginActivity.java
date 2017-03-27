@@ -11,8 +11,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,18 +23,19 @@ import com.hyphenate.chat.EMClient;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 private EditText et_zhanghao,et_mima;
-    private Button btn_loading;
+    private ImageButton btn_loading;
     private TextView tv_zhuce;
     private Context context= LoginActivity.this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        initView();
     }
     private void initView(){
         et_zhanghao= (EditText) findViewById(R.id.et_zhanghao);
         et_mima= (EditText) findViewById(R.id.et_mima);
-        btn_loading= (Button) findViewById(R.id.btn_loading);
+        btn_loading= (ImageButton) findViewById(R.id.btn_loading);
         tv_zhuce= (TextView) findViewById(R.id.tv_zhuce);
         btn_loading.setOnClickListener(this);
         tv_zhuce.setOnClickListener(this);
